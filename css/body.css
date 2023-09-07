@@ -1,19 +1,90 @@
 body {
-    background-color: lightblue;
+  background-color: lightblue;
 }
 
 #product_body {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
 }
 
 .product_container {
-    padding: 20px;
-    border: 1px solid blue;
-    border-radius: 25px;
-    background-color: cornflowerblue;
+  padding: 20px;
+  border: 1px solid blue;
+  border-radius: 25px;
+  background-color: cornflowerblue;
+}
+
+.product_description_and_button {
+  display: flex;
+  flex-direction: column;
 }
 
 .product_description {
-    font-size: 1.5rem;
+  display: block;
+  font-size: 1.5rem;
+}
+
+.product_button_order {
+  font-size: 1.5rem;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: blue;
+  color: white;
+  border: 1px solid blue;
+}
+
+.product_button_order:hover {
+  background-color: white;
+  color: blue;
+  border: 1px solid blue;
+  cursor: pointer;
+}
+
+/* iPhone 6/7/8 and SE (1st generation) */
+@media only screen
+/* and (min-device-width: 375px) */
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  /* Vos styles pour tous les iPhone ici */
+  #product_body {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* iPhone X, XS, 11 Pro, 12 Pro */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 812px)
+and (-webkit-min-device-pixel-ratio: 3) {
+  /* Your styles for iPhone X/XS/11 Pro/12 Pro here */
+  #product_body {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* iPad Portrait */
+@media only screen
+and (min-device-width: 768px)
+and (max-device-width: 1024px)
+and (-webkit-min-device-pixel-ratio: 1) {
+  /* Your styles for iPad in portrait mode here */
+  #product_body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* iPad Landscape */
+@media only screen
+and (min-device-width: 1024px)
+and (max-device-width: 1366px)
+and (-webkit-min-device-pixel-ratio: 1) {
+  /* Your styles for iPad in landscape mode here */
+  #product_body {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
