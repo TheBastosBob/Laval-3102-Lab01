@@ -1,0 +1,19 @@
+body {
+    background-color: lightblue;
+}
+
+#product_body {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product_container {
+    padding: 20px;
+    border: 1px solid blue;
+    border-radius: 25px;
+    background-color: cornflowerblue;
+}
+
+.product_description {
+    font-size: 1.5rem;
+}

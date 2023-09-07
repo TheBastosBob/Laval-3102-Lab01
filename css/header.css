@@ -1,0 +1,15 @@
+.header{
+    display: flex;
+    background-color: #0eb358;
+    font-size: 2rem;
+    height: 2.5rem;
+}
+
+.header a {
+  float: left;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
