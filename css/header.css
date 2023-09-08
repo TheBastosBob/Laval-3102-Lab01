@@ -1,39 +1,6 @@
-/* DEFAULT */
-/*
-.navbar {
-  overflow: hidden;
-  display: flex;
-  justify-content: space-between;
-  background-color: cornflowerblue;
-  font-size: 2rem;
-  height: 2.5rem;
-  align-items: center;
-  padding: 20px;
-}
-
-.brand {
-  font-size: 1.5rem;
-}
-
-.navbar > a {
-  font-size: 1.5rem;
-  color: black;
-  text-decoration: none;
-  padding: 8px 18px;
-}
-
-.navbar a:hover {
-  background-color: #ddd;
-}
-
-.brand {
-  background-color: red;
-}
-*/
-
-/* MOBILE */
-/*
-.navbar {
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  .navbar {
     flex-direction: column;
     height: auto;
   }
@@ -55,6 +22,10 @@
     height: auto;
   }
 
+  .brand > h3 {
+    text-align: center;
+  }
+
   #infos > a:hover{
     display: flex;
     flex-direction: column;
@@ -65,12 +36,11 @@
   .brand {
     background-color: blue;
   }
- */
+}
 
-
-/* tablet */
-/*
-.navbar {
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  .navbar {
     overflow: hidden;
     display: flex;
     background-color: cornflowerblue;
@@ -91,42 +61,65 @@
     padding: 8px 18px;
   }
 
-  .brand {
-    background-color: pink;
-  }
- */
-
-/* Media Query for Mobile Devices */
-@media (max-width: 480px) {
-  .brand {
-    background-color: red;
-  }
-}
-
-/* Media Query for low resolution  Tablets, Ipads */
-@media (min-width: 481px) and (max-width: 767px) {
-  .brand {
-    background-color: yellow;
+  .navbar a:hover {
+    background-color: #ddd;
   }
 }
 
 /* Media Query for Tablets Ipads portrait mode */
 @media (min-width: 768px) and (max-width: 1024px){
+  .navbar {
+    overflow: hidden;
+    display: flex;
+    background-color: cornflowerblue;
+    font-size: 2rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+
   .brand {
-    background-color: blue;
+    font-size: 2.5rem;
+  }
+
+  .navbar > a {
+    font-size: 2rem;
+    color: black;
+    text-decoration: none;
+    padding: 8px 18px;
+  }
+
+  .navbar a:hover {
+    background-color: #ddd;
   }
 }
 
 /* Media Query for Laptops and Desktops */
-@media (min-width: 1025px) and (max-width: 1280px){
-  .brand {
-    background-color: green;
+@media (min-width: 1025px) {
+  .navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    background-color: cornflowerblue;
+    font-size: 2rem;
+    height: 2.5rem;
+    align-items: center;
+    padding: 20px;
   }
-}
-
-/* Media Query for Large screens */
-@media (min-width: 1281px) {
+  
   .brand {
-    background-color: white;
+    font-size: 1.5rem;
   }
+  
+  .navbar > a {
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    padding: 8px 18px;
+  }
+  
+  .navbar a:hover {
+    background-color: #ddd;
+  }
+  
 }
