@@ -52,46 +52,37 @@ body {
   cursor: pointer;
 }
 
-/* iPhone 6/7/8 and SE (1st generation) */
-@media only screen
-/* and (min-device-width: 375px) */
-and (max-device-width: 667px)
-and (-webkit-min-device-pixel-ratio: 2) {
-  /* Vos styles pour tous les iPhone ici */
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
   #product_body {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 
-/* iPhone X, XS, 11 Pro, 12 Pro */
-@media only screen
-and (min-device-width: 375px)
-and (max-device-width: 812px)
-and (-webkit-min-device-pixel-ratio: 3) {
-  /* Your styles for iPhone X/XS/11 Pro/12 Pro here */
-  #product_body {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-/* iPad Portrait */
-@media only screen
-and (min-device-width: 768px)
-and (max-device-width: 1024px)
-and (-webkit-min-device-pixel-ratio: 1) {
-  /* Your styles for iPad in portrait mode here */
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
   #product_body {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* iPad Landscape */
-@media only screen
-and (min-device-width: 1024px)
-and (max-device-width: 1366px)
-and (-webkit-min-device-pixel-ratio: 1) {
-  /* Your styles for iPad in landscape mode here */
+/* Media Query for Tablets Ipads portrait mode */
+@media (min-width: 768px) and (max-width: 1024px){
   #product_body {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1025px) and (max-width: 1280px){
+  #product_body {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Media Query for Large screens */
+@media (min-width: 1281px) {
+  #product_body {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
