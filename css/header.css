@@ -1,31 +1,69 @@
-.navbar {
-  overflow: hidden;
-  display: flex;
-  justify-content: space-between;
-  background-color: cornflowerblue;
-  font-size: 2rem;
-  height: 2.5rem;
-  align-items: center;
-  padding: 20px;
+/* 
+const size = {
+  mobileS: '320px',
+  mobileM: '375px',
+  mobileL: '426px', // previous size : 425px
+  tablet: '768px',
+  laptop: '1024px',
+  laptopL: '1440px',
+  desktop: '2560px'
 }
 
-.brand {
-  font-size: 1.5rem;
+export const deviceMinWidth = {
+  mobileS: `(min-width: ${size.mobileS})`,
+  mobileM: `(min-width: ${size.mobileM})`,
+  mobileL: `(min-width: ${size.mobileL})`,
+  tablet: `(min-width: ${size.tablet})`,
+  laptop: `(min-width: ${size.laptop})`,
+  laptopL: `(min-width: ${size.laptopL})`,
+  desktop: `(min-width: ${size.desktop})`,
+  desktopL: `(min-width: ${size.desktop})`
+};
+
+export const deviceMaxWidth = {
+  mobileS: `(max-width: ${size.mobileS})`,
+  mobileM: `(max-width: ${size.mobileM})`,
+  mobileL: `(max-width: ${size.mobileL})`,
+  tablet: `(max-width: ${size.tablet})`,
+  laptop: `(max-width: ${size.laptop})`,
+  laptopL: `(max-width: ${size.laptopL})`,
+  desktop: `(max-width: ${size.desktop})`,
+  desktopL: `(max-width: ${size.desktop})`
+} */
+
+@media (min-width: 1025px) and (max-width: 1280px){
+  .navbar {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    background-color: cornflowerblue;
+    font-size: 2rem;
+    height: 2.5rem;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .brand {
+    font-size: 1.5rem;
+  }
+
+  .navbar > a {
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    padding: 8px 18px;
+  }
+
+  .navbar a:hover {
+    background-color: #ddd;
+  }
+
+  .brand {
+    background-color: red;
+  }
 }
-
-.navbar > a {
-  font-size: 1.5rem;
-  color: black;
-  text-decoration: none;
-  padding: 8px 18px;
-}
-
-.navbar a:hover {
-  background-color: #ddd;
-}
-
-
-@media screen and (max-width: 740px) {
+/* mobile */
+@media (max-width: 480px) {
   .navbar {
     flex-direction: column;
     height: auto;
@@ -54,11 +92,16 @@
     height: auto;
     background-color: #ddd;
   }
+
+  .brand {
+    background-color: blue;
+  }
+
 }
 
 
-
-@media screen and (max-width: 1200px) and (min-width: 741px) {
+/* tablet */
+@media (min-width: 481px) and (max-width: 1023px) {
   .navbar {
     overflow: hidden;
     display: flex;
@@ -79,4 +122,9 @@
     text-decoration: none;
     padding: 8px 18px;
   }
+
+  .brand {
+    background-color: pink;
+  }
+
 }
